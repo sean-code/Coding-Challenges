@@ -66,10 +66,34 @@
 
 // console.log(greeting);
 
-const firstName = "August";
-const secondName = "Alsina";
-// console.log(`My favorite music artist is ${firstName} ${secondName}.`);
-document.getElementById("java").innerHTML=`My favorite music artist is ${firstName} ${secondName}.`
+// const firstName = "August";
+// const secondName = "Alsina";
+// // console.log(`My favorite music artist is ${firstName} ${secondName}.`);
+// document.getElementById("java").innerHTML=`My favorite music artist is ${firstName} ${secondName}.`
+
+
+
+
+
+// Fibonacci Problem
+
+const sequence = () => {
+    const newArray = [0,1];
+    for(let i = 2; i < 12; i++){
+      newArray[i] = newArray[i-1] + newArray[i-2]
+    }
+  // return newArray;
+  const even = newArray.filter(a => a%2== 0);
+  console.log(even);
+  const sumofEven = even.reduce((b, c) => b + c);  
+  console.log(`Summation of even numbers is: ${sumofEven}`);
+  const odd = newArray.filter(x => !even.includes(x));
+  console.log(odd);
+  const sumofOdd = odd.reduce((k, l)=> k + l);
+  console.log(`Summation of odd numbers is: ${sumofOdd}`);     
+}
+
+sequence();
 
 
 
