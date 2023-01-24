@@ -77,23 +77,79 @@
 
 // Fibonacci Problem
 
-const sequence = () => {
-    const newArray = [0,1];
-    for(let i = 2; i < 12; i++){
-      newArray[i] = newArray[i-1] + newArray[i-2]
+// const sequence = () => {
+//     const newArray = [0,1];
+//     for(let i = 2; i < 12; i++){
+//       newArray[i] = newArray[i-1] + newArray[i-2]
+//     }
+//   // return newArray;
+//   const even = newArray.filter(a => a%2== 0);
+//   console.log(even);
+//   const sumofEven = even.reduce((b, c) => b + c);  
+//   console.log(`Summation of even numbers is: ${sumofEven}`);
+//   const odd = newArray.filter(x => !even.includes(x));
+//   console.log(odd);
+//   const sumofOdd = odd.reduce((k, l)=> k + l);
+//   console.log(`Summation of odd numbers is: ${sumofOdd}`);     
+// }
+
+// sequence();
+
+
+
+// function fibonacci() {
+//     let s = t = 0, a = 1, b = 2;
+//     do {
+//         s = a + b;
+//         a = b;
+//         b = s;
+//         t += s & 1 ? 0 : s;
+//     } while (s <= 100);
+//     return t;
+// }
+
+// console.log(fibonacci());
+
+
+
+
+                // Python To JS conversion
+// limit = 100
+
+// function fb(limit){
+//     let s = t = 0, a = 1, b = 2;
+//     do{
+//         sum = a + b
+//         a = b
+//         b = c
+//         c = 4 * b + a
+//     }while (c < limit)
+//   console.log((a,b,c))
+// }
+
+// console.log(fb());
+
+
+
+
+
+function fibonacci(limit) {
+    let a = 0
+    let b = 1
+    let count = 0;
+
+    for(sum = 0; sum < limit;){
+        sum = a + b;
+        a = b;
+        b = sum;
+
+
+        if(sum%2 == 0){
+            count += sum;
+        }else{
+        }
     }
-  // return newArray;
-  const even = newArray.filter(a => a%2== 0);
-  console.log(even);
-  const sumofEven = even.reduce((b, c) => b + c);  
-  console.log(`Summation of even numbers is: ${sumofEven}`);
-  const odd = newArray.filter(x => !even.includes(x));
-  console.log(odd);
-  const sumofOdd = odd.reduce((k, l)=> k + l);
-  console.log(`Summation of odd numbers is: ${sumofOdd}`);     
+    return count;
 }
 
-sequence();
-
-
-
+console.log(fibonacci(100));
