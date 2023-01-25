@@ -159,11 +159,14 @@ console.log(sumUp())
 
 //Part B
 
-const sumItself = (arr, target) => {
+const sumItself = (target) => {
   arr = [3, 5, -4, 8, 11, 1, -1, 6];
   target = 10;
 
-  arr.sort
+  const arrayed = arr.map(item => {
+    return item * 2
+    // console.log(arrayed);
+  })
 }
 
 
