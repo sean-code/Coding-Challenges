@@ -132,7 +132,8 @@
 
 
 
-
+// 0, 1, 1, 2, 3, 5, 8, 13 ...
+  
 
 
 function fibonacci(limit) {
@@ -140,14 +141,13 @@ function fibonacci(limit) {
     let b = 1
     let count = 0;
 
-    for(sum = 0; sum < limit;){
-        sum = a + b;
+    for(c = 0; c < limit; c++){
+        c = a + b;
         a = b;
-        b = sum;
+        b = c;
 
-
-        if(sum % 2 == 0){
-            count += sum;
+        if(c % 2 == 0){
+            count += c;
         }else{
 
         }
