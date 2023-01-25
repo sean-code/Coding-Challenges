@@ -136,43 +136,44 @@
   
 
 
-function fibonacci(limit) {
-    let a = 0
-    let b = 1
-    let count = 0;
+// function fibonacci(limit) {
+//     let a = 0
+//     let b = 1
+//     let count = 0;
 
-    for(c = 0; c < limit; c++){
-        c = a + b;
+//     for(c = 0; c < limit; c++){
+//         c = a + b;
+//         a = b;
+//         b = c;
+
+//         if(c % 2 == 0){
+//             count += c;
+//         }else{
+
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(fibonacci(100));
+
+
+
+
+
+
+
+const sequence = (n) => {
+    let a = 0;
+    let b = 1;
+    let c = a + b;
+    let newArray = [];
+    while(c < n){
+        newArray.push(c);
         a = b;
         b = c;
-
-        if(c % 2 == 0){
-            count += c;
-        }else{
-
-        }
+        c = a + b;
     }
-    return count;
 }
 
-console.log(fibonacci(100));
-
-
-            //Derrick's
-
-// const sequence = number =>{
-
-//     let n1 = 0;
-//     let n2 = 1;
-//     let nextTerm;
-//     let arr = [n1, n2]
-//     nextTerm = n1 + n2;
-//     while (nextTerm <= number){
-//         arr.push(nextTerm);
-//         n1 = n2;
-//         n2 = nextTerm;
-//         nextTerm = n1 + n2;
-//     }
-//     return arr;
-//     }
-// console.log(sequence(100))
+console.log(sequence(100));
