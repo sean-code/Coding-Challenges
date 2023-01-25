@@ -133,6 +133,8 @@
 
 
 
+
+
 function fibonacci(limit) {
     let a = 0
     let b = 1
@@ -144,12 +146,33 @@ function fibonacci(limit) {
         b = sum;
 
 
-        if(sum%2 == 0){
+        if(sum % 2 == 0){
             count += sum;
         }else{
+
         }
     }
     return count;
 }
 
 console.log(fibonacci(100));
+
+
+            //Derrick's
+
+// const sequence = number =>{
+
+//     let n1 = 0;
+//     let n2 = 1;
+//     let nextTerm;
+//     let arr = [n1, n2]
+//     nextTerm = n1 + n2;
+//     while (nextTerm <= number){
+//         arr.push(nextTerm);
+//         n1 = n2;
+//         n2 = nextTerm;
+//         nextTerm = n1 + n2;
+//     }
+//     return arr;
+//     }
+// console.log(sequence(100))
